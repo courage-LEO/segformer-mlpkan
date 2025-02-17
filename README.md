@@ -4,7 +4,7 @@
 MLPKANSegFormer is a lightweight semantic segmentation model based on MLP and KAN (Kernel Attention Network), combined with the SegFormer framework, for semantic segmentation tasks on UAVid datasets.
 
 ## Catalog structure
-``
+```
 📂 MLPKANSegFormer
 ├── 📂 models
 │ ├── EncoderBlock.py
@@ -64,7 +64,7 @@ This project uses the UAVid dataset and the data is organized as follows:
 ## Train the model
 Run the following command to train:
 ```bash
-python train.py --data_path . /uavid_v1.5_official_release_image --batch_size 64 --epochs 2000
+python train.py --data_path . /uavid_v1.5_official_release_image --batch_size 64 --epochs 500
 ```
 Default parameters:
 - `batch_size`: 64
