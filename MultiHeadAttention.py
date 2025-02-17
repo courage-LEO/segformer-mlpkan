@@ -21,18 +21,18 @@ class MultiHeadAttention(nn.Module):
             self.soft = nn.Softmax(dim=3)
             self.dropout = nn.Dropout(dropout)
 
+
         def split_head(self, x):
-            batch, seq_len, channels = x.shape
-            assert channels % self.head_num == 0
-            x = x.view(batch, seq_len, self.head_num, channels // self.head_num)
-            # x = torch.tensor_split(x, self.head_num, dim=2)
-            # x = torch.stack(x, dim=1)
-            return x.permute(0, 2, 1, 3)
+            x = torch.tensor_split(x, self.head_num, dim=2)
+            x = torch.stack(x, dim=1)
+            return x
+
 
         def concat_head(self, x):
             x = torch.tensor_split(x, x.size()[1], dim=1)
             x = torch.concat(x, dim=3).squeeze(dim=1)
             return x
+
 
         def forward(self, x):
             _x = x
