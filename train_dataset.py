@@ -96,7 +96,7 @@ def main():
     model = MLPKANSegFormer(input_height=64, class_num=20).to(device)
 
     # 训练参数
-    epochs = 2000
+    epochs = 500
     lr = 3e-4
     weight_decay = 2e-4
 
