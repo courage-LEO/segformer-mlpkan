@@ -7,39 +7,23 @@ MLPKANSegFormer is a lightweight semantic segmentation model based on MLP and KA
 ``
 📂 MLPKANSegFormer
 ├── 📂 models
-
 │ ├── EncoderBlock.py
-
 │ ├── EncoderBlock1.py
-
 │ ├── MLPKANDecoder.py
-
 │ ├── MLPKANSegFormer.py
-
 │ ├── LayerNorm2d.py
-
 │ ├── MixFFN.py
-
 │ ├── MultiHeadAttention.py
-
 │ ├── OverlapPatchMerging.py
-
 │ ├── KAN.py
-
 ├─ 📂 data
-
 │ ├── train_dataset.py
-
 ├── 📜 README.md
-
 ├── 📜 requirements.txt
-
 ├── 📜 train.py
-
 ├── 📜 inference.py
 
 ```
-
 
 ## Dependencies
 Before you start using this project, make sure the following dependencies are installed on your environment.
